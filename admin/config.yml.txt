@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ja
+media_folder: "uploads"
+public_folder: "/uploads"
+show_preview_links: false
+
+collections:
+  - name: "site_data"
+    label: "サイト設定"
+    editor:
+      preview: false
+    files:
+      - label: "店舗ページ設定"
+        name: "stores"
+        file: "data/stores.json"
+        format: "json"
+        fields:
+          - label: "サイト共通設定"
+            name: "site"
+            widget: "object"
+            summary: "{{fields.heroTitle}}"
+            fields:
+              - { label: "ブラウザタイトル", name: "pageTitle", widget: "string" }
+              - { label: "メイン見出し", name: "heroTitle", widget: "string" }
+              - { label: "説明文", name: "heroText", widget: "text" }
+              - { label: "導入文", name: "introText", widget: "text" }
+
+          - label: "店舗一覧"
+            name: "stores"
+            widget: "list"
+            summary: "{{fields.area}} / {{fields.name}}"
+            collapsed: true
+            label_singular: "店舗"
+            fields:
+              - { label: "管理ID（半角英数字とハイフン推奨）", name: "id", widget: "string", hint: "例: kumamoto-honten" }
+              - { label: "エリア名", name: "area", widget: "string", hint: "例: 熊本エリア / 東京エリア" }
+              - { label: "店舗名", name: "name", widget: "string" }
+              - { label: "限定メニュー名", name: "limitedMenuName", widget: "string", required: false }
+              - { label: "説明文", name: "description", widget: "text", required: false }
+              - { label: "補足情報", name: "note", widget: "text", required: false }
+              - { label: "店舗キャッチ", name: "storeCatch", widget: "text", required: false }
+              - { label: "POP画像", name: "popImage", widget: "image", required: false, hint: "画像をアップすると uploads フォルダに保存されます" }
+              - { label: "画像の代替テキスト", name: "popAlt", widget: "string", required: false }
+              - { label: "表示する", name: "active", widget: "boolean", default: true, required: false }

@@ -1,0 +1,242 @@
+{
+  "site": {
+    "pageTitle": "店舗限定メニュー | 桂花ラーメン",
+    "eyebrow": "マー油香る一杯で、おなかも心もいっぱいに",
+    "heroTitle": "桂花ラーメン 店舗限定メニュー",
+    "heroText": "熊本エリア・東京エリアの各店舗で楽しめる限定メニューをご紹介します。気になるエリアと店舗をタブで切り替えてご覧ください。（※季節限定等のメニューをご提供している店舗のみクリックできます）"
+  },
+  "stores": [
+    {
+      "id": "kumamoto-honten",
+      "area": "熊本エリア",
+      "name": "本店",
+      "storeCatch": "1955年創業、桂花ラーメンの原点が感じられる本店です。熊本市の中心部にあり、熊本城からも近いロケーションです。",
+      "slides": [
+        {
+          "image": "./uploads/honten-pop1.png",
+          "title": "こってり桂花ラーメン",
+          "description": "桂花ラーメン創業の味、香ばしいマー油とコク深い豚骨スープが特徴の桂花ラーメンに背脂をトッピングして、こってり濃厚に仕上げました。",
+          "alt": "本店 マー油香るこってり桂花ラーメン"
+        },
+        {
+          "image": "./uploads/honten-pop2.png",
+          "title": "辛辣麺",
+          "description": "ピリッとした辛みの中に旨みが広がる、身体の芯から温まるメニューです。",
+          "alt": "本店 辛辣麺"
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "kumamoto-tsuruya",
+      "area": "熊本エリア",
+      "name": "鶴屋店",
+      "limitedMenuName": "鶴屋店限定メニュー（入力例）",
+      "description": "鶴屋店限定メニューの説明文をここに入力してください。",
+      "storeCatch": "お買い物の合間にも立ち寄りやすい店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "鶴屋店 限定メニューPOP","tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "kumamoto-shinkansen",
+      "area": "熊本エリア",
+      "name": "熊本駅新幹線口店",
+      "limitedMenuName": "熊本駅新幹線口店限定メニュー（入力例）",
+      "description": "駅利用のお客様に向けた限定メニュー説明を入力してください。",
+      "storeCatch": "観光・出張のお客様にも人気の店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "熊本駅新幹線口店 限定メニューPOP",
+      "tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "kumamoto-hikarinomori",
+      "area": "熊本エリア",
+      "name": "光の森店",
+      "limitedMenuName": "光の森店限定メニュー（入力例）",
+      "description": "光の森店限定メニューの説明文を入力してください。",
+      "storeCatch": "地域のお客様に親しまれる店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "光の森店 限定メニューPOP","tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "kumamoto-kurokami",
+      "area": "熊本エリア",
+      "name": "黒髪店",
+      "limitedMenuName": "黒髪店限定メニュー（入力例）",
+      "description": "黒髪店限定メニューの説明文を入力してください。",
+      "storeCatch": "日常使いしやすい落ち着いた店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "黒髪店 限定メニューPOP","tabDisabled": true,"active": true
+    },
+    {
+      "id": "kumamoto-sakuramachi",
+      "area": "熊本エリア",
+      "name": "サクラマチくまもと　味千×桂花",
+      "limitedMenuName": "サクラマチくまもと限定メニュー（入力例）",
+      "description": "サクラマチくまもと店の限定メニュー説明を入力してください。",
+      "storeCatch": "お出かけ中にも立ち寄りやすい店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "サクラマチくまもと 味千×桂花 限定メニューPOP","tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "kumamoto-airport",
+      "area": "熊本エリア",
+      "name": "阿蘇くまもと空港店　味千×桂花",
+      "limitedMenuName": "阿蘇くまもと空港店限定メニュー（入力例）",
+      "description": "空港店限定メニューの説明文を入力してください。",
+      "storeCatch": "熊本の思い出に残る一杯をご案内する店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "阿蘇くまもと空港店 味千×桂花 限定メニューPOP","tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "kumamoto-tokuou",
+      "area": "熊本エリア",
+      "name": "徳王店",
+      "limitedMenuName": "徳王店限定メニュー（入力例）",
+      "description": "徳王店限定メニューの説明文を入力してください。",
+      "storeCatch": "地域のお客様との距離が近い店舗です。徳王店限定のチキン南蛮やホルモン煮込みは大人気！お得な夜ランチもございます。嬉しい駐車場完備のお店です。",
+     "slides": [
+        {
+          "image": "./uploads/tokuo-pop1.jpg",
+          "title": "チキン南蛮ランチ",
+          "description": "桂花ラーメン創業の味、香ばしいマー油とコク深い豚骨スープが特徴の桂花ラーメンに背脂をトッピングして、こってり濃厚に仕上げました。",
+          "alt": "徳王店　チキン南蛮ランチ"
+        },
+        {
+          "image": "./uploads/tokuo-pop2.jpg",
+          "title": "ホルモン煮込み",
+          "description": "ピリッとした辛みの中に旨みが広がる、身体の芯から温まるメニューです。",
+          "alt": "徳王店 ホルモン煮込み"
+        },{
+          "image": "./uploads/tokuo-pop3.jpg",
+          "title": "豚骨醤油ラーメン",
+          "description": "ピリッとした辛みの中に旨みが広がる、身体の芯から温まるメニューです。",
+          "alt": "徳王店　豚骨醤油ラーメン"
+        }
+
+      ],"tabDisabled": false,
+      "active": true
+    },
+    {
+      "id": "tokyo-suehiro",
+      "area": "東京エリア",
+      "name": "新宿末広店",
+      "limitedMenuName": "新宿末広店限定メニュー（入力例）",
+      "description": "新宿末広店限定メニューの説明文を入力してください。",
+      "storeCatch": "新宿エリアで根強い人気の店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "新宿末広店 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-higashi",
+      "area": "東京エリア",
+      "name": "新宿東口駅前店",
+      "limitedMenuName": "新宿東口駅前店限定メニュー（入力例）",
+      "description": "新宿東口駅前店限定メニューの説明文を入力してください。",
+      "storeCatch": "アクセスしやすく立ち寄りやすい店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "新宿東口駅前店 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-fanten",
+      "area": "東京エリア",
+      "name": "新宿ふぁんてん",
+      "limitedMenuName": "新宿ふぁんてん限定メニュー（入力例）",
+      "description": "新宿ふぁんてん限定メニューの説明文を入力してください。",
+      "storeCatch": "個性ある限定メニュー訴求に向いた店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "新宿ふぁんてん 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-nishiguchi",
+      "area": "東京エリア",
+      "name": "新宿西口店",
+      "limitedMenuName": "新宿西口店限定メニュー（入力例）",
+      "description": "新宿西口店限定メニューの説明文を入力してください。",
+      "storeCatch": "忙しい都心でも立ち寄りやすい店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "新宿西口店 限定メニューPOP","tabDisabled": true,
+      "active": true
+    },
+    {
+      "id": "tokyo-shibuya",
+      "area": "東京エリア",
+      "name": "渋谷センター街店",
+      "limitedMenuName": "渋谷センター街店限定メニュー（入力例）",
+      "description": "渋谷センター街店限定メニューの説明文を入力してください。",
+      "storeCatch": "渋谷らしい活気のある店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "渋谷センター街店 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-ikebukuro",
+      "area": "東京エリア",
+      "name": "池袋東口店",
+      "limitedMenuName": "池袋東口店限定メニュー（入力例）",
+      "description": "池袋東口店限定メニューの説明文を入力してください。",
+      "storeCatch": "幅広いお客様に親しまれる店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "池袋東口店 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-shimbashi",
+      "area": "東京エリア",
+      "name": "新橋虎ノ門店",
+      "limitedMenuName": "新橋虎ノ門店限定メニュー（入力例）",
+      "description": "新橋虎ノ門店限定メニューの説明文を入力してください。",
+      "storeCatch": "仕事帰りにも立ち寄りやすい店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "新橋虎ノ門店 限定メニューPOP",
+      "active": true
+    },
+    {
+      "id": "tokyo-okachimachi",
+      "area": "東京エリア",
+      "name": "御徒町店",
+      "limitedMenuName": "御徒町店限定メニュー（入力例）",
+      "description": "御徒町店限定メニューの説明文を入力してください。",
+      "storeCatch": "日常の一杯として親しまれる店舗です。",
+      "popImages": [
+        "./uploads/pop-sample.svg"
+      ],
+      "popAlt": "御徒町店 限定メニューPOP",
+      "active": true
+    }
+  ]
+}

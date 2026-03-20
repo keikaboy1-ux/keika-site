@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f4efe4"/>
+  <rect x="60" y="60" width="1080" height="780" rx="36" fill="#fffaf2" stroke="#d9cfbf" stroke-width="4"/>
+  <text x="600" y="220" text-anchor="middle" font-size="58" font-family="sans-serif" fill="#738c60" font-weight="700">限定メニューPOP</text>
+  <text x="600" y="330" text-anchor="middle" font-size="42" font-family="sans-serif" fill="#8c5a3c">画像をここに差し替えてください</text>
+  <rect x="240" y="400" width="720" height="220" rx="24" fill="#e7efe0"/>
+  <text x="600" y="485" text-anchor="middle" font-size="38" font-family="sans-serif" fill="#5d7450">管理画面からアップロード可能</text>
+  <text x="600" y="555" text-anchor="middle" font-size="28" font-family="sans-serif" fill="#5d7450">スマホ・パソコンの両方で更新できます</text>
+  <text x="600" y="720" text-anchor="middle" font-size="26" font-family="sans-serif" fill="#7d7268">Keika Ramen Sample Image</text>
+</svg>

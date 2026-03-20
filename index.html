@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>店舗限定メニュー | 桂花ラーメン</title>
+  <meta name="description" content="桂花ラーメンの店舗限定メニューをご紹介します。" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    :root {
+      --bg: #fff7ee;
+      --panel: #fffdf9;
+      --line: #f0d8bf;
+      --text: #5b4535;
+      --muted: #8a6b55;
+      --brand: #f08c42;
+      --brand-dark: #cc6d28;
+      --brand-soft: #ffe7d1;
+      --accent: #b85b1f;
+      --shadow: 0 10px 28px rgba(180, 105, 40, 0.10);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: linear-gradient(180deg, #fff8f0 0%, #fff2e5 100%);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    img,
+    iframe {
+      display: block;
+      max-width: 100%;
+    }
+
+    .hero {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background:
+        radial-gradient(circle at top right, rgba(240, 140, 66, 0.18), transparent 28%),
+        linear-gradient(135deg, rgba(255, 240, 225, 0.96), rgba(255, 249, 241, 0.96) 70%);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(240, 216, 191, 0.95);
+      padding: 20px 20px 18px;
+      box-shadow: 0 4px 20px rgba(180, 105, 40, 0.08);
+    }
+
+    .hero__inner,
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .logo {
+      width: 56px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--brand-dark);
+      line-height: 1.2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin: 0 auto 12px;
+    }
+
+    .hero-copy {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      line-height: 1.25;
+      color: var(--brand-dark);
+    }
+
+    .hero-copy p {
+      max-width: 860px;
+      margin: 0 auto;
+      color: #7a5d49;
+      font-size: 0.98rem;
+    }
+
+    .container {
+      padding: 28px 0 64px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      color: var(--brand-dark);
+      font-size: 1.25rem;
+    }
+
+    .area-tabs,
+    .store-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .area-tabs {
+      margin-bottom: 18px;
+    }
+
+    .store-tabs {
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 12px 16px;
+      background: #ffe8d5;
+      color: #805637;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      transform: translateY(-1px);
+      background: #ffdcbf;
+    }
+
+    .tab-btn.is-active {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(240, 140, 66, 0.25);
+    }
+
+    .tab-btn.is-disabled {
+      background: #f4e5d8;
+      color: #b08e76;
+      cursor: not-allowed;
+      opacity: 0.7;
+      box-shadow: none;
+    }
+
+    .tab-btn.is-disabled:hover {
+      transform: none;
+      background: #f4e5d8;
+    }
+
+    .store-panel {
+      display: none;
+    }
+
+    .store-panel.is-active {
+      display: block;
+    }
+
+    .store-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .menu-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .pop-card {
+      background: #fff8f1;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      background: #fff3e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.35s ease;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .slide {
+      min-width: 100%;
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      max-height: 720px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .slide .pdf-frame {
+      width: 100%;
+      height: min(72vh, 720px);
+      border: none;
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .pdf-fallback {
+      width: 100%;
+      max-width: 720px;
+      min-height: 280px;
+      background: #fffaf5;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .pdf-fallback a {
+      display: inline-block;
+      align-self: center;
+      text-decoration: none;
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--brand-dark);
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .slider-arrow:hover {
+      background: #fff;
+    }
+
+    .slider-arrow.prev {
+      left: 10px;
+    }
+
+    .slider-arrow.next {
+      right: 10px;
+    }
+
+    .slider-count {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      background: rgba(91, 69, 53, 0.78);
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      z-index: 2;
+    }
+
+    .pop-card__body {
+      padding: 16px;
+    }
+
+    .pop-card__body h4 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
+
+    .pop-card__body p {
+      margin: 0;
+      color: #6f5643;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-box {
+      background: #fff8f1;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .info-box h5 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      color: var(--brand-dark);
+    }
+
+    .loading,
+    .error {
+      padding: 18px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      background: #fffdf9;
+      border: 1px solid var(--line);
+    }
+
+    .error {
+      color: #8a3e3e;
+      border-color: #dfb9b9;
+      background: #fff7f7;
+    }
+
+    .empty-state {
+      padding: 30px 18px;
+      text-align: center;
+      border: 1px dashed #ddb18d;
+      border-radius: 16px;
+      color: var(--muted);
+      background: #fffaf4;
+    }
+
+    .footer {
+      text-align: center;
+      color: #9c7253;
+      font-size: 0.9rem;
+      padding: 0 20px 40px;
+    }
+
+    @media (max-width: 900px) {
+      .menu-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 16px 14px 14px;
+      }
+
+      .hero__inner,
+      .container {
+        width: min(1120px, calc(100% - 20px));
+      }
+
+      .header-bar {
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .logo {
+        width: 46px;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+      }
+
+      .eyebrow {
+        font-size: 0.82rem;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 1.45rem;
+      }
+
+      .hero-copy p {
+        font-size: 0.92rem;
+      }
+
+      .container {
+        padding-top: 20px;
+      }
+
+      .tab-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .slider {
+        min-height: 220px;
+      }
+
+      .slider-arrow {
+        width: 38px;
+        height: 38px;
+      }
+
+      .slide img {
+        max-height: 460px;
+      }
+
+      .slide .pdf-frame {
+        height: min(62vh, 460px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="header-bar">
+        <img src="./uploads/logo.png" alt="桂花ラーメン ロゴ" class="logo">
+        <div class="brand-name">桂花ラーメン</div>
+      </div>
+
+      <div class="hero-copy">
+        <div class="eyebrow" id="eyebrow"></div>
+        <h1 id="site-title">桂花ラーメン 店舗限定メニュー</h1>
+        <p id="site-description">
+          熊本エリア・東京エリアの各店舗で楽しめる限定メニューをご紹介します。
+          気になるエリアと店舗をタブで切り替えてご覧ください。
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="section-title">エリアで選ぶ</h2>
+      <div id="area-tabs" class="area-tabs"></div>
+
+      <h3 class="section-title">店舗で選ぶ</h3>
+      <div id="store-tabs" class="store-tabs"></div>
+
+      <div id="status" class="loading">データを読み込み中です…</div>
+      <div id="store-panels"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 桂花ラーメン</p>
+  </footer>
+
+  <script>
+    const state = {
+      data: null,
+      currentArea: null,
+      currentStoreId: null,
+      sliderIndexes: {}
+    };
+
+    async function loadData() {
+      const status = document.getElementById('status');
+
+      try {
+        const res = await fetch('./data/stores.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('stores.json の読み込みに失敗しました');
+        const data = await res.json();
+
+        state.data = data;
+        applySiteText(data.site || {});
+        initTabs(data.stores || []);
+        status.remove();
+      } catch (error) {
+        status.className = 'error';
+        status.textContent = 'data/stores.json の読み込みに失敗しました。ファイル名・保存場所・JSONの記号を確認してください。';
+        console.error(error);
+      }
+    }
+
+    function applySiteText(site) {
+      document.title = site.pageTitle || '店舗限定メニュー | 桂花ラーメン';
+
+      document.getElementById('eyebrow').textContent =
+        site.eyebrow || '女性創業・体にやさしい一杯';
+
+      document.getElementById('site-title').textContent =
+        site.heroTitle || '桂花ラーメン 店舗限定メニュー';
+
+      document.getElementById('site-description').textContent =
+        site.heroText || '熊本エリア・東京エリアの各店舗で楽しめる限定メニューをご紹介します。';
+    }
+
+    function initTabs(stores) {
+      const visibleStores = stores.filter(store => store.active !== false);
+      const areas = [...new Set(visibleStores.map(store => store.area))];
+
+      if (!areas.length) {
+        renderEmpty();
+        return;
+      }
+
+      state.currentArea = areas[0];
+
+      const firstStore = visibleStores.find(
+        store => store.area === state.currentArea && store.tabDisabled !== true
+      );
+
+      state.currentStoreId = firstStore ? firstStore.id : null;
+
+      renderAreaTabs(areas);
+      renderStoreTabs(visibleStores);
+      renderPanels(visibleStores);
+    }
+
+    function renderAreaTabs(areas) {
+      const areaTabs = document.getElementById('area-tabs');
+      areaTabs.innerHTML = '';
+
+      areas.forEach(area => {
+        const btn = document.createElement('button');
+        btn.className = `tab-btn ${state.currentArea === area ? 'is-active' : ''}`;
+        btn.textContent = area;
+        btn.type = 'button';
+
+        btn.addEventListener('click', () => {
+          state.currentArea = area;
+
+          const stores = state.data.stores.filter(
+            store => store.active !== false && store.area === area
+          );
+
+          const firstEnabledStore = stores.find(store => store.tabDisabled !== true);
+          state.currentStoreId = firstEnabledStore ? firstEnabledStore.id : null;
+
+          renderAreaTabs(areas);
+          renderStoreTabs(state.data.stores.filter(store => store.active !== false));
+          renderPanels(state.data.stores.filter(store => store.active !== false));
+        });
+
+        areaTabs.appendChild(btn);
+      });
+    }
+
+    function renderStoreTabs(stores) {
+      const storeTabs = document.getElementById('store-tabs');
+      storeTabs.innerHTML = '';
+
+      const filtered = stores.filter(store => store.area === state.currentArea);
+
+      filtered.forEach(store => {
+        const isDisabled = store.tabDisabled === true;
+
+        const btn = document.createElement('button');
+        btn.className = `tab-btn ${state.currentStoreId === store.id ? 'is-active' : ''} ${isDisabled ? 'is-disabled' : ''}`;
+        btn.textContent = store.name;
+        btn.type = 'button';
+
+        if (isDisabled) {
+          btn.disabled = true;
+          btn.setAttribute('aria-disabled', 'true');
+          btn.title = '現在、店舗限定メニューはありません';
+        } else {
+          btn.addEventListener('click', () => {
+            state.currentStoreId = store.id;
+            renderStoreTabs(stores);
+            renderPanels(stores);
+          });
+        }
+
+        storeTabs.appendChild(btn);
+      });
+    }
+
+    function getSlides(store) {
+      if (Array.isArray(store.slides) && store.slides.length) {
+        return store.slides.map(slide => ({
+          image: slide.image || './uploads/pop-sample.svg',
+          title: slide.title || store.limitedMenuName || '限定メニュー名を入力してください',
+          description: slide.description || store.description || '限定メニューの説明文を入力してください。',
+          alt: slide.alt || store.popAlt || `${store.name} の限定メニューPOP画像`
+        }));
+      }
+
+      if (Array.isArray(store.popImages) && store.popImages.length) {
+        return store.popImages.map(img => ({
+          image: img,
+          title: store.limitedMenuName || '限定メニュー名を入力してください',
+          description: store.description || '限定メニューの説明文を入力してください。',
+          alt: store.popAlt || `${store.name} の限定メニューPOP画像`
+        }));
+      }
+
+      return [{
+        image: './uploads/pop-sample.svg',
+        title: store.limitedMenuName || '限定メニュー名を入力してください',
+        description: store.description || '限定メニューの説明文を入力してください。',
+        alt: store.popAlt || `${store.name} の限定メニューPOP画像`
+      }];
+    }
+
+    function isPdfFile(path) {
+      return /\.pdf(\?|#|$)/i.test(path || '');
+    }
+
+    function renderSlideMedia(slide, fallbackLabel) {
+      const file = slide.image || './uploads/pop-sample.svg';
+      const alt = slide.alt || fallbackLabel;
+
+      if (isPdfFile(file)) {
+        return `
+          <iframe
+            class="pdf-frame"
+            src="${escapeHtml(file)}#view=FitH"
+            title="${escapeHtml(alt)}"
+          ></iframe>
+          <div class="pdf-fallback">
+            <div>PDFのPOPを表示しています。うまく表示されない場合は下のボタンから開いてください。</div>
+            <a href="${escapeHtml(file)}" target="_blank" rel="noopener noreferrer">PDFを開く</a>
+          </div>
+        `;
+      }
+
+      return `<img src="${escapeHtml(file)}" alt="${escapeHtml(alt)}" />`;
+    }
+
+    function renderPanels(stores) {
+      const panels = document.getElementById('store-panels');
+      const filtered = stores.filter(
+        store => store.area === state.currentArea && store.tabDisabled !== true
+      );
+
+      if (!filtered.length) {
+        panels.innerHTML = `
+          <div class="empty-state">
+            このエリアの表示対象店舗はまだありません。
+          </div>
+        `;
+        return;
+      }
+
+      panels.innerHTML = filtered.map(store => {
+        const slides = getSlides(store);
+
+        if (typeof state.sliderIndexes[store.id] !== 'number') {
+          state.sliderIndexes[store.id] = 0;
+        }
+
+        if (state.sliderIndexes[store.id] > slides.length - 1) {
+          state.sliderIndexes[store.id] = 0;
+        }
+
+        const currentIndex = state.sliderIndexes[store.id] || 0;
+        const currentSlide = slides[currentIndex];
+        const menuName = currentSlide.title || '限定メニュー名を入力してください';
+        const description = currentSlide.description || '限定メニューの説明文を入力してください。';
+        const storeCatch = store.storeCatch || '各店舗ごとの限定メニューをご案内しています。';
+
+        return `
+          <article class="store-panel ${state.currentStoreId === store.id ? 'is-active' : ''}">
+            <div class="store-meta">
+              <span class="pill">${escapeHtml(store.area)}</span>
+              <span class="pill">店舗名：${escapeHtml(store.name)}</span>
+            </div>
+
+            <div class="menu-layout">
+              <div class="pop-card">
+                <div class="slider">
+                  <div class="slider-track" id="slider-track-${escapeHtml(store.id)}">
+                    ${slides.map((slide, index) => `
+                      <div class="slide">
+                        ${renderSlideMedia(slide, `${store.name} の画像 ${index + 1}`)}
+                      </div>
+                    `).join('')}
+                  </div>
+
+                  ${slides.length > 1 ? `
+                    <button class="slider-arrow prev" type="button" onclick="changeSlide('${escapeJs(store.id)}', -1)" aria-label="前の画像">‹</button>
+                    <button class="slider-arrow next" type="button" onclick="changeSlide('${escapeJs(store.id)}', 1)" aria-label="次の画像">›</button>
+                  ` : ''}
+
+                  <div class="slider-count" id="slider-count-${escapeHtml(store.id)}">
+                    ${state.sliderIndexes[store.id] + 1} / ${slides.length}
+                  </div>
+                </div>
+
+                <div class="pop-card__body">
+                  <h4>${escapeHtml(menuName)}</h4>
+                  <p>${escapeHtml(description)}</p>
+                </div>
+              </div>
+
+              <div class="info-list">
+                <div class="info-box">
+                  <h5>店舗について</h5>
+                  <div>${escapeHtml(storeCatch)}</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      filtered.forEach(store => updateSlider(store.id));
+    }
+
+    function changeSlide(storeId, delta) {
+      const store = state.data.stores.find(item => item.id === storeId);
+      if (!store) return;
+
+      const slides = getSlides(store);
+
+      let nextIndex = (state.sliderIndexes[storeId] || 0) + delta;
+
+      if (nextIndex < 0) nextIndex = slides.length - 1;
+      if (nextIndex >= slides.length) nextIndex = 0;
+
+      state.sliderIndexes[storeId] = nextIndex;
+      renderPanels(state.data.stores.filter(store => store.active !== false));
+    }
+
+    function updateSlider(storeId) {
+      const track = document.getElementById(`slider-track-${storeId}`);
+      const count = document.getElementById(`slider-count-${storeId}`);
+      const store = state.data.stores.find(item => item.id === storeId);
+      if (!track || !store) return;
+
+      const slides = getSlides(store);
+      const index = state.sliderIndexes[storeId] || 0;
+
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      if (count) {
+        count.textContent = `${index + 1} / ${slides.length}`;
+      }
+    }
+
+    function renderEmpty() {
+      document.getElementById('area-tabs').innerHTML = '';
+      document.getElementById('store-tabs').innerHTML = '';
+      document.getElementById('store-panels').innerHTML = `
+        <div class="empty-state">
+          表示できる店舗データがありません。管理画面または data/stores.json を確認してください。
+        </div>
+      `;
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function escapeJs(value) {
+      return String(value).replaceAll("'", "\\'");
+    }
+
+    loadData();
+
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
