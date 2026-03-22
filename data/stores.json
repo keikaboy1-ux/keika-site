@@ -228,25 +228,25 @@
           "title": "特製春麺",
           "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
           "alt": "渋谷センター街店　特製春麺"
-    },
-    {
-      "image": "./uploads/shibuya-pop2.png",
-      "title": "醤鶏肉麺（ジャンジーローメン）",
-      "description": "柔らかい照り焼き風の鶏肉をたっぷり載せた渋谷店人気メニューです",
-      "alt": "渋谷センター街店　醤鶏肉麺"
-    },
-    {
-      "image": "./uploads/shibuya-pop3.png",
-      "title": "鶏の唐揚げ、醤鶏肉",
-      "description": "渋谷センター街店はおつまみも充実！鶏の唐揚げや醤鶏肉をドリンクと一緒にどうぞ！",
-      "alt": "渋谷センター街店　鶏の唐揚げ、醤鶏肉"
-    },
-    {
-      "image": "./uploads/shibuya-pop4.png",
-      "title": "味噌叉焼麺",
-      "description": "三種の味噌をブレンドした特製味噌にたっぷりの叉焼と半熟玉子をトッピングした食べ応えある一品です",
-      "alt": "渋谷センター街店　味噌叉焼麺"
-    }
+        },
+        {
+          "image": "./uploads/shibuya-pop2.png",
+          "title": "醤鶏肉麺（ジャンジーローメン）",
+          "description": "柔らかい照り焼き風の鶏肉をたっぷり載せた渋谷店人気メニューです",
+          "alt": "渋谷センター街店　醤鶏肉麺"
+        },
+        {
+          "image": "./uploads/shibuya-pop3.png",
+          "title": "鶏の唐揚げ、醤鶏肉",
+          "description": "渋谷センター街店はおつまみも充実！鶏の唐揚げや醤鶏肉をドリンクと一緒にどうぞ！",
+          "alt": "渋谷センター街店　鶏の唐揚げ、醤鶏肉"
+        },
+        {
+          "image": "./uploads/shibuya-pop4.png",
+          "title": "味噌叉焼麺",
+          "description": "三種の味噌をブレンドした特製味噌にたっぷりの叉焼と半熟玉子をトッピングした食べ応えある一品です"
+          "alt": "渋谷センター街店　味噌叉焼麺
+        }
   ],
       "tabDisabled": false,
       "active": true
