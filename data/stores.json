@@ -122,7 +122,7 @@
         {
           "image": "./uploads/tokuo-pop2.jpg",
           "title": "ホルモン煮込み",
-          "description": "おつまみにもご飯にも合うホルモン煮込みは徳王店の人気メニュー！夜ランチとしてセットもお得です。",
+          "description": "おつまみにもご飯にも合うホルモン鉄板焼きは徳王店の人気メニュー！夜ランチとしてセットもお得です。",
           "alt": "徳王店 ホルモン煮込み"
         },{
           "image": "./uploads/tokuo-pop3.jpg",
@@ -140,7 +140,7 @@
       "name": "新宿末広店",
       "limitedMenuName": "新宿末広店限定メニュー（入力例）",
       "description": "新宿末広店限定メニューの説明文を入力してください。",
-      "storeCatch": "新宿エリアで根強い人気の店舗です。",
+      "storeCatch": "1968年東京出店の第１号店です。寄席の新宿末廣亭も近く、賑わいのある新宿三丁目一角のお店です。",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -153,7 +153,7 @@
       "name": "新宿東口駅前店",
       "limitedMenuName": "新宿東口駅前店限定メニュー（入力例）",
       "description": "新宿東口駅前店限定メニューの説明文を入力してください。",
-      "storeCatch": "アクセスしやすく立ち寄りやすい店舗です。",
+      "storeCatch": "1972年開店、東京第２号店です。昭和を感じる当時の佇まいそのまま、根強い人気のお店です",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -166,7 +166,7 @@
       "name": "新宿ふぁんてん",
       "limitedMenuName": "新宿ふぁんてん限定メニュー（入力例）",
       "description": "新宿ふぁんてん限定メニューの説明文を入力してください。",
-      "storeCatch": "個性ある限定メニュー訴求に向いた店舗です。",
+      "storeCatch": "地下１階の客席はテーブル席も多くおひとり様からご家族連れまで幅広く親しまれるお店です。",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -179,7 +179,7 @@
       "name": "新宿西口店",
       "limitedMenuName": "新宿西口店限定メニュー（入力例）",
       "description": "新宿西口店限定メニューの説明文を入力してください。",
-      "storeCatch": "忙しい都心でも立ち寄りやすい店舗です。",
+      "storeCatch": "新宿では西口側に唯一あるお店です。都庁方面に行かれた方や西口電気街で買い物された方にも立ち寄りやすいお店です。",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -192,7 +192,7 @@
       "name": "渋谷センター街店",
       "limitedMenuName": "渋谷センター街店限定メニュー（入力例）",
       "description": "渋谷センター街店限定メニューの説明文を入力してください。",
-      "storeCatch": "渋谷らしい活気のある店舗です。",
+      "storeCatch": "渋谷センター街から一歩入ったところにある、渋谷駅からも近い抜群のロケーションです。１階２階と客席があり、団体様にも喜ばれるお店です。",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -205,7 +205,7 @@
       "name": "池袋東口店",
       "limitedMenuName": "池袋東口店限定メニュー（入力例）",
       "description": "池袋東口店限定メニューの説明文を入力してください。",
-      "storeCatch": "幅広いお客様に親しまれる店舗です。",
+      "storeCatch": "池袋サンシャイン６０通りに近く、お買い物やお出かけのついでにも立ち寄りやすいお店です",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -218,7 +218,7 @@
       "name": "新橋虎ノ門店",
       "limitedMenuName": "新橋虎ノ門店限定メニュー（入力例）",
       "description": "新橋虎ノ門店限定メニューの説明文を入力してください。",
-      "storeCatch": "仕事帰りにも立ち寄りやすい店舗です。",
+      "storeCatch": "新橋と虎ノ門の間にあり、皇居からも近いロケーションです！",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
@@ -231,7 +231,7 @@
       "name": "御徒町店",
       "limitedMenuName": "御徒町店限定メニュー（入力例）",
       "description": "御徒町店限定メニューの説明文を入力してください。",
-      "storeCatch": "日常の一杯として親しまれる店舗です。",
+      "storeCatch": "御徒町駅から徒歩１分、JR線の高架下にあるラーメン横丁に入っています。おつまみの唐揚げや五香肉も大人気！アメ横も近いですよ。",
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
