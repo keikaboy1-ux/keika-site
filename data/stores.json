@@ -79,7 +79,9 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "黒髪店 限定メニューPOP","tabDisabled": true,"active": true
+      "popAlt": "黒髪店 限定メニューPOP",
+      "tabDisabled": true,
+      "active": true
     },
     {
       "id": "kumamoto-sakuramachi",
@@ -91,7 +93,8 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "サクラマチくまもと 味千×桂花 限定メニューPOP","tabDisabled": true,
+      "popAlt": "サクラマチくまもと 味千×桂花 限定メニューPOP",
+      "tabDisabled": true,
       "active": true
     },
     {
@@ -127,7 +130,7 @@
           "description": "おつまみにもご飯にも合うホルモン鉄板焼きは徳王店の人気メニュー！夜ランチとしてセットもお得です。",
           "alt": "徳王店 ホルモン煮込み"
         },
-       {
+        {
           "image": "./uploads/tokuo-pop3.jpg",
           "title": "豚骨醤油ラーメン",
           "description": "熊本県産本醸造醤油と背脂で仕上げた、ほんのり生姜香る桂花の豚骨醤油ラーメン。濃厚なのに軽やかな味わいをお楽しみください。",
@@ -244,7 +247,6 @@
     }
   ],
       "tabDisabled": false,
-      
       "active": true
     },
     {
