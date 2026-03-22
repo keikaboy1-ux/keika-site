@@ -215,7 +215,7 @@
       "limitedMenuName": "渋谷センター街店限定メニュー（入力例）",
       "description": "渋谷センター街店限定メニューの説明文を入力してください。",
       "storeCatch": "渋谷センター街から一歩入ったところにある、渋谷駅からも近い抜群のロケーションです。１階２階と客席があり、団体様にも喜ばれるお店です。",
-        "slides": [
+      "slides": [
     {
       "image": "./uploads/shibuya-pop1.jpg",
       "title": "特製春麺",
