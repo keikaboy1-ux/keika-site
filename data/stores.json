@@ -37,7 +37,8 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "鶴屋店 限定メニューPOP","tabDisabled": true,
+      "popAlt": "鶴屋店 限定メニューPOP",
+      "tabDisabled": true,
       "active": true
     },
     {
@@ -64,7 +65,8 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "光の森店 限定メニューPOP","tabDisabled": true,
+      "popAlt": "光の森店 限定メニューPOP",
+      "tabDisabled": true,
       "active": true
     },
     {
@@ -216,7 +218,7 @@
       "description": "渋谷センター街店限定メニューの説明文を入力してください。",
       "storeCatch": "渋谷センター街から一歩入ったところにある、渋谷駅からも近い抜群のロケーションです。１階２階と客席があり、団体様にも喜ばれるお店です。",
       "slides": [
-    {
+        {
       "image": "./uploads/shibuya-pop1.jpg",
       "title": "特製春麺",
       "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
