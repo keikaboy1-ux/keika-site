@@ -225,9 +225,9 @@
       "slides": [
         {
           "image": "./uploads/shibuya-pop1.jpg",
-      "title": "特製春麺",
-      "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
-      "alt": "渋谷センター街店　特製春麺"
+          "title": "特製春麺",
+          "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
+          "alt": "渋谷センター街店　特製春麺"
     },
     {
       "image": "./uploads/shibuya-pop2.png",
