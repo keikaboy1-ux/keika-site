@@ -107,7 +107,8 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "阿蘇くまもと空港店 味千×桂花 限定メニューPOP","tabDisabled": true,
+      "popAlt": "阿蘇くまもと空港店 味千×桂花 限定メニューPOP",
+      "tabDisabled": true,
       "active": true
     },
     {
@@ -210,7 +211,8 @@
       "popImages": [
         "./uploads/pop-sample.svg"
       ],
-      "popAlt": "新宿西口店 限定メニューPOP","tabDisabled": true,
+      "popAlt": "新宿西口店 限定メニューPOP",
+      "tabDisabled": true,
       "active": true
     },
     {
@@ -222,7 +224,7 @@
       "storeCatch": "渋谷センター街から一歩入ったところにある、渋谷駅からも近い抜群のロケーションです。１階２階と客席があり、団体様にも喜ばれるお店です。",
       "slides": [
         {
-      "image": "./uploads/shibuya-pop1.jpg",
+          "image": "./uploads/shibuya-pop1.jpg",
       "title": "特製春麺",
       "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
       "alt": "渋谷センター街店　特製春麺"
