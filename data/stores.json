@@ -252,10 +252,26 @@
       "limitedMenuName": "池袋東口店限定メニュー（入力例）",
       "description": "池袋東口店限定メニューの説明文を入力してください。",
       "storeCatch": "池袋サンシャイン６０通りに近く、お買い物やお出かけのついでにも立ち寄りやすいお店です",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/ikebukuro-pop1.png",
+          "title": "炙りトロ肉チャーシュー麺",
+          "description": "口の中でとろける叉焼に国産味付け背脂の甘みをあわせた濃厚で食べ応えのある一品です。",
+          "alt": "池袋東口店　炙りトロ肉チャーシュー麺"
+        },
+        {
+          "image": "./uploads/ikebukuro-pop2.png",
+          "title": "水餃子セット",
+          "description": "水餃子と細麺桂花、ライスをあわせた食べ応えのあるセットです",
+          "alt": "池袋東口店　水餃子セット"
+        },
+        {
+          "image": "./uploads/ikebukuro-pop3.png",
+          "title": "炒飯セット",
+          "description": "人気の炒飯と細麺桂花のセット。ランチタイムにも大人気です",
+          "alt": "池袋東口店　炒飯セット"
+        }
       ],
-      "popAlt": "池袋東口店 限定メニューPOP",
       "active": true
     },
     {
@@ -265,10 +281,14 @@
       "limitedMenuName": "新橋虎ノ門店限定メニュー（入力例）",
       "description": "新橋虎ノ門店限定メニューの説明文を入力してください。",
       "storeCatch": "新橋と虎ノ門の間にあり、皇居からも近いロケーションです！",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/tora-pop1.png",
+          "title": "赤阿蘇ラーメン",
+          "description": "熊本産高菜と挽肉炒めを載せた人気の「阿蘇ラーメン」に赤マー油を合わせスパイシーに仕上げた人気メニューです",
+          "alt": "新橋虎ノ門店　赤阿蘇ラーメン"
+        },
       ],
-      "popAlt": "新橋虎ノ門店 限定メニューPOP",
       "active": true
     },
     {
@@ -278,10 +298,20 @@
       "limitedMenuName": "御徒町店限定メニュー（入力例）",
       "description": "御徒町店限定メニューの説明文を入力してください。",
       "storeCatch": "御徒町駅から徒歩１分、JR線の高架下にあるラーメン横丁に入っています。おつまみの唐揚げや五香肉も大人気！アメ横も近いですよ。",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/oka-pop1.jpg",
+          "title": "旨辛みそ五香肉麺",
+          "description": "旨辛スープと人気の五香肉（肩ロース香味揚げ）の相性は抜群！ご飯まで欲しくなる満腹至福の一杯です",
+          "alt": "御徒町店　旨辛みそ五香肉麺"
+        },
+        {
+          "image": "./uploads/oka-pop2.png",
+          "title": "おつまみセット各種",
+          "description": "人気の唐揚げや五香肉、３点盛りのおつまみセットなど、ちょっと一杯に最高の組み合わせをご用意しました。",
+          "alt": "御徒町店　おつまみセット各種"
+        },
       ],
-      "popAlt": "御徒町店 限定メニューPOP",
       "active": true
     }
   ]
