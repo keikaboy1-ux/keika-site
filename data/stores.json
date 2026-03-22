@@ -141,10 +141,14 @@
       "limitedMenuName": "新宿末広店限定メニュー（入力例）",
       "description": "新宿末広店限定メニューの説明文を入力してください。",
       "storeCatch": "1968年東京出店の第１号店です。寄席の新宿末廣亭も近く、賑わいのある新宿三丁目一角のお店です。",
-      "popImages": [
-        "./uploads/pop-sample.svg"
-      ],
-      "popAlt": "新宿末広店 限定メニューPOP",
+      "slides": [
+        {
+          "image": "./uploads/suehiro-pop1.jpg",
+          "title": "麻辣担々麺",
+          "description": "山椒香るシビ辛が好きな方には是非お勧め！新宿末広店の人気メニューです",
+          "alt": "新宿末広店　麻辣坦々麺"
+        },
+      ],"tabDisabled": false,
       "active": true
     },
     {
