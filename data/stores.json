@@ -161,10 +161,15 @@
       "limitedMenuName": "新宿東口駅前店限定メニュー（入力例）",
       "description": "新宿東口駅前店限定メニューの説明文を入力してください。",
       "storeCatch": "1972年開店、東京第２号店です。昭和を感じる当時の佇まいそのまま、根強い人気のお店です",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/ekimae-pop1.jpg",
+          "title": "味噌桂花ラーメン、味噌太肉麺",
+          "description": "数種の味噌をブレンドし生姜やニンニクをたっぷり使用した新宿東口駅前店オリジナルの味噌豚骨です。美味しさも免疫力もアップ！！",
+          "alt": "新宿東口駅前店　味噌桂花拉麺、味噌太肉麺"
+        }
       ],
-      "popAlt": "新宿東口駅前店 限定メニューPOP",
+      "tabDisabled": false,
       "active": true
     },
     {
@@ -174,10 +179,20 @@
       "limitedMenuName": "新宿ふぁんてん限定メニュー（入力例）",
       "description": "新宿ふぁんてん限定メニューの説明文を入力してください。",
       "storeCatch": "地下１階の客席はテーブル席も多くおひとり様からご家族連れまで幅広く親しまれるお店です。",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/fanten-pop1.png",
+          "title": "ふぁんてん丼",
+          "description": "角切り自家製叉焼に自家製マヨネーズ、鰹節と海苔をトッピングしたふぁんてんオリジナルの丼。スープもついて大人気メニューです。",
+          "alt": "新宿ふぁんてん　ふぁんてん丼（スープ付）"
+        },
+        {
+          "image": "./uploads/fanten-pop2.png",
+          "title": "辛肉麺",
+          "description": "新宿ふぁんてんオリジナルの辛肉味噌が桂花のスープと相性抜群。新宿ふぁんてんの人気メニューの一つです。",
+          "alt": "新宿ふぁんてん　辛肉麺"
+        }
       ],
-      "popAlt": "新宿ふぁんてん 限定メニューPOP",
       "active": true
     },
     {
@@ -200,10 +215,16 @@
       "limitedMenuName": "渋谷センター街店限定メニュー（入力例）",
       "description": "渋谷センター街店限定メニューの説明文を入力してください。",
       "storeCatch": "渋谷センター街から一歩入ったところにある、渋谷駅からも近い抜群のロケーションです。１階２階と客席があり、団体様にも喜ばれるお店です。",
-      "popImages": [
-        "./uploads/pop-sample.svg"
+      "slides": [
+        {
+          "image": "./uploads/shibuya-pop1.jpg",
+          "title": "特製春麺",
+          "description": "満開の花のようにローストビーフが花開きます。ほんのり柑橘が香る春らしい華やかな一品です。",
+          "alt": "渋谷センター街店　特製春麺"
+        }
       ],
-      "popAlt": "渋谷センター街店 限定メニューPOP",
+      "tabDisabled": false,
+      
       "active": true
     },
     {
