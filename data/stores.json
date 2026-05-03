@@ -286,7 +286,7 @@
       "name": "新橋虎ノ門店",
       "limitedMenuName": "新橋虎ノ門店限定メニュー（入力例）",
       "description": "新橋虎ノ門店限定メニューの説明文を入力してください。",
-      "storeCatch": "新橋と虎ノ門の間にあり、皇居からも近いロケーションです！",
+      "storeCatch": "新橋と虎ノ門の間にあり、皇居や日比谷公園からも近いロケーションです！",
       "slides": [
         {
           "image": "./uploads/tora-pop1.png",
